@@ -1,4 +1,4 @@
-from prompt import instruction_str, new_prompt
+from prompt import instruction_str, new_prompt, context
 from note_engine import note_engine
 
 # API Key
@@ -39,7 +39,7 @@ tools = [
 ]
 
 llm = OpenAI(model='gpt-3.5-turbo')
-agent = ReActAgent.from_tools(tools=tools, llm=llm, verbose=True)
+agent = ReActAgent.from_tools(tools=tools, llm=llm, verbose=True, context=context)
 
 
 
