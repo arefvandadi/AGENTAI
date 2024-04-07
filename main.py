@@ -1,3 +1,5 @@
+# Source: https://youtu.be/ul0QsodYct4
+
 from prompt import instruction_str, new_prompt, context
 from note_engine import note_engine
 from pdf import canada_engine
