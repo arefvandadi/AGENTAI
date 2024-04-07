@@ -1,5 +1,6 @@
 from prompt import instruction_str, new_prompt, context
 from note_engine import note_engine
+from pdf import canada_engine
 
 # API Key
 import os
@@ -34,6 +35,13 @@ tools = [
         metadata=ToolMetadata(
             name='population_data',
             description="This gives information at the world populationa and demographic",
+        )
+    ),
+    QueryEngineTool(
+        query_engine=canada_engine,
+        metadata=ToolMetadata(
+            name='canada_data',
+            description="This gives detailed information about Canada the country",
         )
     )
 ]
