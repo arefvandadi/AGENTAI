@@ -1,3 +1,5 @@
+from prompt import instruction_str, new_prompt
+
 # API Key
 import os
 import openai
@@ -11,10 +13,14 @@ print(population_df.head())
 
 # Defining a Query Engine
 from llama_index.core.query_engine import PandasQueryEngine
-panda_query_engine = PandasQueryEngine(df=population_df, verbose=True)
-# panda_query_engine.query(
-#     'What is the 34th ranked country based on population?'
-#     )
+panda_query_engine = PandasQueryEngine(df=population_df, verbose=True, 
+                                    instruction_str=instruction_str,
+                                    pandas_prompt=new_prompt, 
+                                    )
+panda_query_engine.query(
+    'What is the 34th ranked country based on population?'
+    )
+
 
 
 
