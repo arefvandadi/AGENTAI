@@ -2,7 +2,7 @@
 
 from prompt import instruction_str, new_prompt, context
 from note_engine import note_engine
-from pdf import canada_engine
+from pdf_reader import canada_engine
 
 # API Key
 import os
